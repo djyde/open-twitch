@@ -1,0 +1,15 @@
+/ - @games.each do |game|
+/   %h1= game.name
+
+.events
+
+.games-block
+  
+  %h2.title 正在直播的游戏
+
+  - @games.each do |game|
+    = link_to('#',class: 'block') do
+      .game
+        .pic
+          = image_tag('http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-140x196.jpg')
+        .name= game.name
