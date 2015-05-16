@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516062244) do
+ActiveRecord::Schema.define(version: 20150516073147) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150516062244) do
     t.text     "channel_description"
     t.string   "channel_title"
     t.boolean  "live_status",            default: false
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
