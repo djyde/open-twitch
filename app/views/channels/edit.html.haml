@@ -1,5 +1,6 @@
 = simple_form_for @channel do |f|
   = f.input :name, label: '直播标题'
+  = f.input :url, label: 'RTMP地址'
   = f.input :description, label: '直播内容详情'
   = f.input :channel_on, label: '直播开启', as: :boolean
   = f.submit :submit

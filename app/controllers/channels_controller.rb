@@ -18,6 +18,6 @@ class ChannelsController < ApplicationController
   private
 
     def new_params
-      params.require(:channel).permit(:name,:description,:channel_on)
+      params.require(:channel).permit(:name,:description,:channel_on, :url)
     end
 end
