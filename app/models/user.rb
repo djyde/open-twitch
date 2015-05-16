@@ -5,4 +5,16 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :games
+  has_one :channel
+
+  before_save :create_channel
+
+  protected
+    def create_channel
+      channel = self.channel.new do |c|
+        c.name = "#{self.username} 的频道"
+        c.description = "无"
+      end
+      channel.save
+    end
 end
