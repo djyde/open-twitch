@@ -11,14 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516073147) do
+ActiveRecord::Schema.define(version: 20150516083917) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "user_id"
+    t.boolean  "channel_on",  default: false
   end
+
+  add_index "channels", ["user_id"], name: "index_channels_on_user_id"
 
   create_table "games", force: :cascade do |t|
     t.string   "name"
