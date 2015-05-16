@@ -3,13 +3,18 @@
 
 .events
 
+  .brand
+    %h4.center SISE GAME TV
+    %p.center Comming soon...
+
+
 .games-block
   
-  %h2.title 正在直播的游戏
+  %h2.title Games
 
   - @games.each do |game|
     = link_to('#',class: 'block') do
       .game
         .pic
           = image_tag(game.pic)
-        .name= game.name
+        .name= game.name 

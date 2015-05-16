@@ -2,6 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.grid{
+  margin: 0 auto;
+  width: 960px;
+}
+
+.header{
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.center{
+  text-align: center;
+}
+
+.events{
+  background-color: rgba(0,0,0,.8);
+  color: #fff;
+  height: 540px;
+
+  .brand{
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 240px;
+  }
+}
+
 .games-block{
   width: 960px;
   margin: 0 auto;
