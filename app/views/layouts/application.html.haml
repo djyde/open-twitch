@@ -16,6 +16,8 @@
           - if user_signed_in?
             %li
               = link_to(current_user.username, profile_path(current_user.id))
+            %li
+              = link_to('直播通道', edit_channel_path(current_user.channel.id))
             %li 
               = link_to('退出', destroy_user_session_path, method: 'DELETE')
           - else

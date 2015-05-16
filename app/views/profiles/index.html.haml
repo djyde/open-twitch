@@ -4,19 +4,18 @@
       .avatar
         = image_tag('http://tp2.sinaimg.cn/1649937881/180/40025567279/1')
       .username= @user.username
+      .description= @user.description
       - if user_signed_in?
-        .edit
+        .edit{style: 'text-align: center;'}
           = link_to('编辑资料',edit_user_registration_path)
-          = link_to('开始直播',edit_channel_path(current_user.channel.id))
     / # .description= @user.description
-    %h4 直播公告
-    .announce
-      每天 12 点左右直播英雄联盟排位
     .live
+      %h3.center 直播
       - if @user.channel.channel_on == false
-        %p.center 目前不在直播
+        %p.center{style: 'color: red; font-size: .9em;'} 目前不在直播
       - else
-        %h4 正在直播
-        %p= @user.channel.name
-        %p= @user.channel.description
-      %p.center 非直播玩家
+        %div.center
+          %span{style: 'font-size: 1em;'} 正在直播：
+          = link_to(@user.channel.name, channel_path(@user.channel.id), method: 'GET') 
+        %p.center{style: 'font-size: .8em;'}= @user.channel.description
+      = link_to('直播通道',edit_channel_path(current_user.channel.id), class: :button)

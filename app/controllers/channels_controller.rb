@@ -1,6 +1,6 @@
 class ChannelsController < ApplicationController
 
-  layout 'channel'
+  layout 'channel', only: [:show]
 
   def show
     @channel = Channel.find(params[:id])
