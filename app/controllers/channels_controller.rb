@@ -1,5 +1,11 @@
 class ChannelsController < ApplicationController
 
+  layout 'channel'
+
+  def show
+    @channel = Channel.find(params[:id])
+  end
+
   def edit
     @channel = Channel.find(params[:id])
   end

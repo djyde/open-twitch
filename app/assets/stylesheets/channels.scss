@@ -1,3 +1,24 @@
 // Place all the styles related to the Channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.channel-block{
+  width: 100%;
+  padding-right: 340px;
+  .player{
+    width: 800px;
+    height: 400px;
+    background-color: gray;
+  }
+}
+
+.chat-block{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 340px;
+  height: 100%;
+  background-color: #000;
+}
