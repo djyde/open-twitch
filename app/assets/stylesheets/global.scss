@@ -1,6 +1,14 @@
+$primary: #009688;
+
+
 body{
   -webkit-font-smoothing: antialiased;
-  font-family: "PetalaPro","Helvetica Neue",Helvetica,"Arial","Source Han Sans CN","Hiragino Sans GB","Microsoft YaHei","Microsoft JhengHei",sans-serif;
+  font-family: Karla,'Hiragino Sans GB','Microsoft YaHei',微软雅黑,STHeiti,'WenQuanYi Micro Hei',Helvetica,Arial,sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: $primary;
 }
 
 .center{

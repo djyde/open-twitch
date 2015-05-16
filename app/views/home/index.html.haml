@@ -9,25 +9,15 @@
 
 
 .lives-block
-  %h2.title Lives
+  .title 
+    %h1 Live
+    %span 正在直播
   - @channels.each do |channel|
     .item
       = link_to(channel_path(channel.id), method: 'GET') do
         .img
       .activity
-        = link_to(channel.name,'#')
+        = link_to(channel.name, channel_path(channel.id), method: 'GET')
       .user
         = link_to(channel.user.username,profile_path(channel.user.id))
         %span 正在直播
-
-
-.games-block
-  
-  %h2.title Games
-
-  - @games.each do |game|
-    = link_to('#',class: 'block') do
-      .game
-        .pic
-          = image_tag(game.pic)
-        .name= game.name 
