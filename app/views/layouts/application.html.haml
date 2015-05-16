@@ -10,7 +10,8 @@
 
     .header
       .grid
-        .logo SISE TV
+        .logo
+          = link_to('SISE TV',root_path)
         %ul.nav
           - if user_signed_in?
             %li
