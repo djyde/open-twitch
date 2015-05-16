@@ -5,4 +5,10 @@
   .title= @channel.name
   .description= @channel.description
 
-.chat-block hi
+.chat-block
+  .message
+    %p.status
+  .send
+    %input#username{type: 'hidden', value: current_user.username}
+    %input#msg{type: 'text'}
+    %button#send{type: 'submit'} Send

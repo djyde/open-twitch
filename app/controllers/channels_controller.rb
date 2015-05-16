@@ -12,7 +12,7 @@ class ChannelsController < ApplicationController
 
   def update
     @new_channel = Channel.find(params[:id]).update(new_params)
-    redirect_to profile_path(params[:id])
+    redirect_to profile_path(current_user.id)
   end
 
   private

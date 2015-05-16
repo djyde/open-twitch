@@ -3,10 +3,55 @@
   %head
     %title OpenTwitch
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
+    = javascript_include_tag 'https://cdn.socket.io/socket.io-1.2.0.js'
     / = stylesheet_link_tag '//vjs.zencdn.net/4.12/video-js.css'
     / = javascript_include_tag '//vjs.zencdn.net/4.12/video.js'
     = csrf_meta_tags
+
+    :javascript
+      var socket = io('localhost:1024');
+
+
+      var message = function(){
+
+        $('.status').text('正在连接实时聊天');
+
+        socket.on('connect',function(){
+          $('.status').text('实时聊天连接成功');
+          socket.emit('join channel',{
+            username: $('#username').val(),
+            channel: location.href.split('/').slice(-1).pop()
+          })
+        })
+
+        socket.on('connect_error',function(){
+          $('.status').text('实时聊天连接失败').css({color: red});
+        })
+
+        
+
+        socket.on('chat',function(data){
+
+            $('.message').append('<div class="item"><div class="username">' + data.username + '</div><div class="content">' + data.message + '</div></div>')
+
+        })
+
+
+        $('#send').on('click',function(){
+          socket.emit('chat',{
+            username: $('#username').val(),
+            channel: location.href.split('/').slice(-1).pop(),
+            message: $('#msg').val()
+          })
+          $('.message').append('<div class="item"><div class="username">' + $('#username').val() + '</div><div class="content">' + $('#msg').val() + '</div></div>')
+          $('#msg').val('');
+
+        })
+      }
+
+      $(document).on('ready',message);
+
 
   %body
     .channel-header

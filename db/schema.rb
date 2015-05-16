@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516141343) do
+ActiveRecord::Schema.define(version: 20150516142938) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "name"
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20150516141343) do
     t.integer  "user_id"
     t.boolean  "channel_on",  default: false
     t.string   "url"
+    t.integer  "game_id"
   end
 
+  add_index "channels", ["game_id"], name: "index_channels_on_game_id"
   add_index "channels", ["user_id"], name: "index_channels_on_user_id"
 
   create_table "games", force: :cascade do |t|

@@ -20,5 +20,15 @@
   right: 0;
   width: 340px;
   height: 100%;
-  background-color: #000;
+  background-color: gray;
+
+  .message{
+    
+  }
+
+  .send{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }
