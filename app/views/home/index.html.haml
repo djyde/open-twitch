@@ -10,22 +10,14 @@
 
 .lives-block
   %h2.title Lives
-  .item
-    .img
-    .activity
-      = link_to('一区钻石殴打黄金','#')
-    .user
-      = link_to('randy','#')
-      %span 正在直播
-
-
-  .item
-    .img
-  .item
-    .img
-  .item
-    .img
-
+  - @channels.each do |channel|
+    .item
+      .img
+      .activity
+        = link_to(channel.name,'#')
+      .user
+        = link_to(channel.user.username,'#')
+        %span 正在直播
 
 
 .games-block
