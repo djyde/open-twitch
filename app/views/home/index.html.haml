@@ -17,7 +17,7 @@
       .activity
         = link_to(channel.name,'#')
       .user
-        = link_to(channel.user.username,'#')
+        = link_to(channel.user.username,profile_path(channel.user.id))
         %span 正在直播
 
 

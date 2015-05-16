@@ -1,0 +1,38 @@
+// Place all the styles related to the Profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.profile-block{
+  background-color: rgba(0,0,0,.6);
+
+  .container{
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    .user-info{
+      .avatar{
+        text-align: center;
+        img{
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+        }
+      }
+
+      .username{
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 12px;
+      }
+    }
+
+    .description{
+      margin-top: 12px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+  }
+}
+
