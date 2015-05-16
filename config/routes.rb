@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'home#index'
 
 
-  get 'channel/:id' => 'channels#show', as: :channels
-  get 'profile/:id' => 'profiles#index', as: :profile
+  resources :channels
+
+  get 'users/:id' => 'profiles#index', as: :profile
 
 
 

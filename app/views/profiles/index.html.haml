@@ -3,14 +3,20 @@
     .user-info
       .avatar
         = image_tag('http://tp2.sinaimg.cn/1649937881/180/40025567279/1')
-      .username djyde 
-      .edit
-        = link_to('编辑资料','#')
-    .description 
-      全台 No.1 首創手機遊戲街頭實況攝影棚 SHIRYOUKO_STUDIO，將遊戲實況直播整組移植至西門町現場，每天在西門町街頭的直播節目，讓玩家們能夠比 Live 更 Live 的近距離的接觸。了解實況主們並且也有機會在現場與實況主互動！！ We want every gamer can be HERO ！！
+      .username= @user.username
+      - if user_signed_in?
+        .edit
+          = link_to('编辑资料',edit_user_registration_path)
+          = link_to('开始直播',edit_channel_path(current_user.channel.id))
+    / # .description= @user.description
     %h4 直播公告
     .announce
       每天 12 点左右直播英雄联盟排位
     .live
-      %p.center 目前不在直播
+      - if @user.channel.channel_on == false
+        %p.center 目前不在直播
+      - else
+        %h4 正在直播
+        %p= @user.channel.name
+        %p= @user.channel.description
       %p.center 非直播玩家
