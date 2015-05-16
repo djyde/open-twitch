@@ -12,7 +12,8 @@
   %h2.title Lives
   - @channels.each do |channel|
     .item
-      .img
+      = link_to(channels_path(channel.id)) do
+        .img
       .activity
         = link_to(channel.name,'#')
       .user

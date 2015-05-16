@@ -10,6 +10,25 @@
 .header{
   padding-top: 14px;
   padding-bottom: 14px;
+  overflow: hidden;
+  .logo{
+    float: left;
+    display: inline-block;
+  }
+
+  ul.nav{
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    li{
+      float: left;
+      margin-left: 12px;
+
+      a{
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .center{
