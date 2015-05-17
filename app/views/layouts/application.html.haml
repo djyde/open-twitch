@@ -11,7 +11,7 @@
     .header
       .grid
         .logo
-          = link_to('SISE Game TV',root_path)
+          = link_to('SISE Game TV',root_path, method: 'GET')
         %ul.nav
           - if user_signed_in?
             %li
