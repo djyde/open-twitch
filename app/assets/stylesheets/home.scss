@@ -38,9 +38,10 @@ $primary: #009688;
 .events{
   background-color: #f7f7f7;
   height: 540px;
-
+  background-image: url("background.png");
+  background-size: cover;
   .brand{
-    color: #00796B;
+    color: #fff;
     width: 960px;
     margin: 0 auto;
     padding-top: 240px;

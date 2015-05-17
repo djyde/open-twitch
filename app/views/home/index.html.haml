@@ -4,7 +4,8 @@
 .events
 
   .brand
-    %h4.center SISE GAME TV
+    %h1.center SISE Game TV (SGTV)
+    %h
     %p.center Comming soon...
 
 
@@ -12,12 +13,16 @@
   .title 
     %h1 Live
     %span 正在直播
-  - @channels.each do |channel|
-    .item
-      = link_to(channel_path(channel.id), method: 'GET') do
-        .img
-      .activity
-        = link_to(channel.name, channel_path(channel.id), method: 'GET')
-      .user
-        = link_to(channel.user.username,profile_path(channel.user.id))
-        %span 正在直播
+  - if @channels.count == 0
+    %p{style: 'font-size: .9em'} 当前无直播
+  - else
+    - @channels.each do |channel|
+      .item
+        = link_to(channel_path(channel.id), method: 'GET') do
+          .img
+        / .activity
+        /   = link_to(channel.name, channel_path(channel.id), method: 'GET')
+        .user
+          = link_to(channel.user.username,profile_path(channel.user.id))
+          %span 正在直播
+        .channel-description{style: 'margin-top: 8px; font-size: .8em;'}= channel.description

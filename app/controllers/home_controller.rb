@@ -3,4 +3,8 @@ class HomeController < ApplicationController
     @games = Game.all
     @channels = Channel.where(channel_on: true)
   end
+
+  def about
+    
+  end
 end
