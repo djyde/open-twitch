@@ -9,6 +9,7 @@
     :javascript
       var socket = io(':1024');
 
+      console.log($('#user_id').val());
 
       var message = function(){
 
@@ -43,30 +44,55 @@
         })
 
         socket.on('chat',function(data){
-            var link = $('<a />').attr('href','/users/' + data.user_id).text(data.username).attr('target','_blank');
-            var username = $('<div class="username" />').append(link);
-            var content = $('<div class="content" />').text(data.message);
-            var item = $('<div class="item" />').append(username).append(content);
-            $('.message').append(item);
-            $('.message').scrollTop($('.message').prop('scrollHeight'));
+            if(data.user_id == 'custom'){
+              var username = $('<div class="username" />').text('路人');
+              var content = $('<div class="content" />').text(data.message);
+              var item = $('<div class="item" />').append(username).append(content);
+              $('.message').append(item);
+              $('.message').scrollTop($('.message').prop('scrollHeight'));
+            } else {
+              var link = $('<a />').attr('href','/users/' + data.user_id).text(data.username).attr('target','_blank');
+              var username = $('<div class="username" />').append(link);
+              var content = $('<div class="content" />').text(data.message);
+              var item = $('<div class="item" />').append(username).append(content);
+              $('.message').append(item);
+              $('.message').scrollTop($('.message').prop('scrollHeight'));
+            }
+            
         })
 
         $('#msg').keypress(function(e){
           if(e.which == 13){
             if($(this).val() != ''){
-              socket.emit('chat',{
-                user_id: $('#user_id').val(),
-                username: $('#username').val(),
-                channel: location.href.split('/').slice(-1).pop(),
-                message: $('#msg').val()
-              })
-              var link = $('<a />').attr('href','/users/' + $('#user_id').val()).text($('#username').val());
-              var username = $('<div class="username" />').append(link);
-              var content = $('<div class="content" />').text($('#msg').val());
-              var item = $('<div class="item" />').append(username).append(content);
-              $('.message').append(item);
-              $('#msg').val('');
-              $('.message').scrollTop($('.message').prop('scrollHeight'));
+
+              if($('#user_id').val()){
+                socket.emit('chat',{
+                  user_id: $('#user_id').val(),
+                  username: $('#username').val(),
+                  channel: location.href.split('/').slice(-1).pop(),
+                  message: $('#msg').val()
+                })
+                var link = $('<a />').attr('href','/users/' + $('#user_id').val()).text($('#username').val());
+                var username = $('<div class="username" />').append(link);
+                var content = $('<div class="content" />').text($('#msg').val());
+                var item = $('<div class="item" />').append(username).append(content);
+                $('.message').append(item);
+                $('#msg').val('');
+                $('.message').scrollTop($('.message').prop('scrollHeight'));
+              } else {
+                socket.emit('chat',{
+                  user_id: 'customer',
+                  username: '路人',
+                  channel: location.href.split('/').slice(-1).pop(),
+                  message: $('#msg').val()
+                })
+                var username = $('<div class="username" />').text('路人');
+                var content = $('<div class="content" />').text($('#msg').val());
+                var item = $('<div class="item" />').append(username).append(content);
+                $('.message').append(item);
+                $('#msg').val('');
+                $('.message').scrollTop($('.message').prop('scrollHeight'));
+              }
             }
           }
         })
