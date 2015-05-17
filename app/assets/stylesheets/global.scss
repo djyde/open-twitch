@@ -25,30 +25,43 @@ a{
     color: red;
   }
 
+  span.error{
+    font-size: .9em;
+    color: red;
+  }
+
   label{
     display: inherit;
     margin-top: 24px;
     margin-bottom: 12px;
   }
 
-  input[type="text"]{
+
+  input{
     width: 100%;
     padding: 12px;
     outline: none;
   }
 
-  input[type="text"]:focus{
+  input:focus{
     outline: 1px solid $primary;
   }
 
-  input[type="url"]{
-    width: 100%;
-    outline: none;
-    padding: 12px;
+  input[type="checkbox"]{
+    width: auto;
   }
 
-  input[type="url"]:focus{
-    outline: 1px solid $primary;
+  input[type="submit"]{
+    display: block;
+    text-align: center;
+    width: 128px;
+    margin: 0 auto;
+    padding: 8px 12px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: $primary;
+    font-weight: bold;
+    border: none;
   }
 
   textarea{

@@ -1,0 +1,19 @@
+"zh-CN":
+  models:
+    user: "用户"
+  attributes:
+    user:
+      username: "用户名"
+      password: "密码"
+      email: "邮箱"
+      password_confirmation: "确认密码"
+      description: "个人简介"
+  errors:
+    models:
+      user: "用户"
+    messages:
+      taken: "已被使用"
+      blank: "不能为空"
+      invalid: "请输入正确的值"
+      confirmation: "密码不一致"
+      too_short: "至少 %{count} 个字符"

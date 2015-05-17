@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :games
   has_one :channel
 
-  after_save do
+  after_create do
     create_channel(self)
   end
 
