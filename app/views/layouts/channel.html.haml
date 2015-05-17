@@ -4,7 +4,6 @@
     %title OpenTwitch
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => false
-    = javascript_include_tag 'https://cdn.socket.io/socket.io-1.2.0.js'
     = csrf_meta_tags
 
     :javascript
@@ -29,7 +28,13 @@
         })
 
         socket.on('join channel',function(data){
-          var link = $('<a />').attr('href','/users/' + data.user_id).text(data.username).attr('target','_blank');
+          var link;
+          if(!data.user){
+            data.username = "路人"
+            link = $('<div />').text(data.username);
+          } else {
+            link = $('<a />').attr('href','/users/' + data.user_id).text(data.username).attr('target','_blank');
+          }
           var username = $('<div class="username" />').append(link);
           var content = $('<div class="content" />').text(data.message);
           var item = $('<div class="item" />').append(username).append(content);

@@ -3,6 +3,7 @@
   .channel-block
     .player-block
       .player
+        = swf_tag "StrobeMediaPlayback.swf", flashvars: {src: @channel.url, autoHideControlBar: true, streamType: "live", autoPlay: true,verbose: true}, parameters: {allowfullscreen: true}
     .info
       .title= @channel.name
       .description= @channel.description
