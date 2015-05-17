@@ -17,6 +17,8 @@ zh-CN:
         email: 'email'
         password: '密码'
         password_confirmation: '密码确认'
+        description: '个人简介'
+        current_password: '密码'
         sign_up: '注册'
         remember_me: '保持登录'
     hints:
