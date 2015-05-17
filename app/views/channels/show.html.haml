@@ -1,5 +1,5 @@
 
-.grid{style: 'overflow: hidden; padding-top:24px; width: 1024px;'}
+.grid{style: 'overflow: hidden; padding-top:24px; width: 1080px;'}
   .channel-block
     .player-block
       .player
@@ -15,7 +15,12 @@
   .chat-block
     .status.center
     .message
-    .send
-      %input#user_id{type: 'hidden', value: current_user.id}
-      %input#username{type: 'hidden', value: current_user.username}
-      %input#msg{type: 'text', placeholder: '按空格键发送消息'}
+    - if(user_signed_in?)
+      .send
+        %input#user_id{type: 'hidden', value: current_user.id}
+        %input#username{type: 'hidden', value: current_user.username}
+        %input#msg{type: 'text', placeholder: '按回车键发送消息'}
+    - else
+      .login.center
+        聊天请先
+        = link_to('登录',new_user_session_path)

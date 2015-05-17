@@ -7,13 +7,13 @@ $primary: #009688;
 
 
 .channel-block{
-  width: 750px;
+  width: 800px;
   height: 800px;
   margin-right: 10px;
   display: inline-block;
   .player{
     width: 100%;
-    height: 400px;
+    height: 512px;
     background-color: #000;
   }
 
@@ -67,6 +67,7 @@ $primary: #009688;
   .status{
     font-size: .9em;
     padding: 8px;
+    border-bottom: 1px solid #f7f7f7;
   }
   .message{
     padding: 12px;
@@ -82,6 +83,8 @@ $primary: #009688;
   }
 
   .send{
+    border-top: 1px solid #f7f7f7;
+
     input[type="text"]{
       outline: none;
       font-size: .9em;
@@ -94,5 +97,11 @@ $primary: #009688;
     input[type="text"]:focus{
       outline: 1px solid $primary;
     }
+  }
+
+  .login{
+    border-top: 1px solid #f7f7f7;
+    padding-top: 12px;
+    margin-top: 12px;
   }
 }
