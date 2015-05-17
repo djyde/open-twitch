@@ -1,34 +1,98 @@
 // Place all the styles related to the Channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$primary: #009688;
+
+
 
 
 .channel-block{
-  width: 100%;
-  padding-right: 340px;
+  width: 750px;
+  height: 800px;
+  margin-right: 10px;
+  display: inline-block;
   .player{
-    width: 800px;
+    width: 100%;
     height: 400px;
-    background-color: gray;
+    background-color: #000;
+  }
+
+  .info{
+    background-color: #fff;
+    padding: 12px;
+    box-shadow: rgba(0,0,0,.1) 0 1px 3px 0;
+
+    .title{
+      font-size: 1.4em;
+    }
+
+    .description{
+      font-size: .9em;
+      margin-top: 12px;
+    }
+  }
+
+  .user-block{
+    overflow: hidden;
+    margin-top: 12px;
+
+    .avatar{
+      display: inline-block;
+      float: left;
+      margin-right: 12px;
+      img{
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .content{
+      display: inline-block;
+      float: left;
+      .username{
+        font-weight: bold;
+      }
+      .user-description{
+        font-size: .9em;
+        margin-top: 8px;
+      }
+    }
   }
 }
 
 .chat-block{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 340px;
-  height: 100%;
-  background-color: gray;
-
+  background-color: #fff;
+  width: 256px;
+  height: 640px;
+  float: right;
+  .status{
+    font-size: .9em;
+    padding: 8px;
+  }
   .message{
-    
+    padding: 12px;
+    font-size: .9em;
+    height: 520px;
+    overflow: auto;
+    .item{
+      margin-bottom: 8px;
+      .username{
+        font-weight: bold;
+      }
+    }
   }
 
   .send{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    input[type="text"]{
+      outline: none;
+      font-size: .9em;
+      padding: 4px;
+      height: 24px;
+      margin: 12px;
+      width: 220px;
+    }
+
+    input[type="text"]:focus{
+      outline: 1px solid $primary;
+    }
   }
 }

@@ -36,11 +36,11 @@ $primary: #009688;
 
 
 .events{
-  background-color: rgba(0,0,0,.8);
-  color: #fff;
+  background-color: #f7f7f7;
   height: 540px;
 
   .brand{
+    color: #00796B;
     width: 960px;
     margin: 0 auto;
     padding-top: 240px;
@@ -122,6 +122,7 @@ $primary: #009688;
 }
 
 .footer{
+  margin-top: 64px;
   p{
     font-size: .8em;
   }

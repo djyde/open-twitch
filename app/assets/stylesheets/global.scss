@@ -11,6 +11,71 @@ a{
   color: $primary;
 }
 
+.form{
+
+  width: 50%;
+  margin: 0 auto;
+
+  .button{
+    margin-top: 12px;
+  }
+
+  span.hint{
+    font-size: .9em;
+    color: red;
+  }
+
+  label{
+    display: inherit;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  input[type="text"]{
+    width: 100%;
+    padding: 12px;
+    outline: none;
+  }
+
+  input[type="text"]:focus{
+    outline: 1px solid $primary;
+  }
+
+  input[type="url"]{
+    width: 100%;
+    outline: none;
+    padding: 12px;
+  }
+
+  input[type="url"]:focus{
+    outline: 1px solid $primary;
+  }
+
+  textarea{
+    outline: none;
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+  }
+
+  textarea:focus{
+    outline: 1px solid $primary;
+  }
+}
+
+.button{
+  display: block;
+  text-align: center;
+  width: 64px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: $primary;
+  font-weight: bold;
+  border: none;
+}
+
 .center{
   text-align: center;
 }

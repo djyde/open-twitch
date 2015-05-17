@@ -5,8 +5,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => false
     = javascript_include_tag 'https://cdn.socket.io/socket.io-1.2.0.js'
-    / = stylesheet_link_tag '//vjs.zencdn.net/4.12/video-js.css'
-    / = javascript_include_tag '//vjs.zencdn.net/4.12/video.js'
     = csrf_meta_tags
 
     :javascript
@@ -18,35 +16,54 @@
         $('.status').text('正在连接实时聊天');
 
         socket.on('connect',function(){
-          $('.status').text('实时聊天连接成功');
+          $('.status').text('实时聊天连接成功').css({color: 'green'});
           socket.emit('join channel',{
+            user_id: $('#user_id').val(),
             username: $('#username').val(),
             channel: location.href.split('/').slice(-1).pop()
           })
         })
 
         socket.on('connect_error',function(){
-          $('.status').text('实时聊天连接失败').css({color: red});
+          $('.status').text('实时聊天连接失败').css({color: 'red'});
         })
 
-        
+        socket.on('join channel',function(data){
+          var link = $('<a />').attr('href','/users/' + data.user_id).text(data.username).attr('target','_blank');
+          var username = $('<div class="username" />').append(link);
+          var content = $('<div class="content" />').text(data.message);
+          var item = $('<div class="item" />').append(username).append(content);
+          $('.message').append(item);
+          $('.message').scrollTop($('.message').prop('scrollHeight'));
+        })
 
         socket.on('chat',function(data){
-
-            $('.message').append('<div class="item"><div class="username">' + data.username + '</div><div class="content">' + data.message + '</div></div>')
-
+            var link = $('<a />').attr('href','/users/' + data.user_id).text(data.username).attr('target','_blank');
+            var username = $('<div class="username" />').append(link);
+            var content = $('<div class="content" />').text(data.message);
+            var item = $('<div class="item" />').append(username).append(content);
+            $('.message').append(item);
+            $('.message').scrollTop($('.message').prop('scrollHeight'));
         })
 
-
-        $('#send').on('click',function(){
-          socket.emit('chat',{
-            username: $('#username').val(),
-            channel: location.href.split('/').slice(-1).pop(),
-            message: $('#msg').val()
-          })
-          $('.message').append('<div class="item"><div class="username">' + $('#username').val() + '</div><div class="content">' + $('#msg').val() + '</div></div>')
-          $('#msg').val('');
-
+        $('#msg').keypress(function(e){
+          if(e.which == 13){
+            if($(this).val() != ''){
+              socket.emit('chat',{
+                user_id: $('#user_id').val(),
+                username: $('#username').val(),
+                channel: location.href.split('/').slice(-1).pop(),
+                message: $('#msg').val()
+              })
+              var link = $('<a />').attr('href','/users/' + $('#user_id').val()).text($('#username').val());
+              var username = $('<div class="username" />').append(link);
+              var content = $('<div class="content" />').text($('#msg').val());
+              var item = $('<div class="item" />').append(username).append(content);
+              $('.message').append(item);
+              $('#msg').val('');
+              $('.message').scrollTop($('.message').prop('scrollHeight'));
+            }
+          }
         })
       }
 
@@ -54,9 +71,27 @@
 
 
   %body
-    .channel-header
-      .logo
-        = link_to('SISE TV',root_path)
+
+    .header
+      .grid
+        .logo
+          = link_to('SISE Game TV',root_path)
+        %ul.nav
+          - if user_signed_in?
+            %li
+              = link_to(current_user.username, profile_path(current_user.id))
+            %li
+              = link_to('直播通道', edit_channel_path(current_user.channel.id))
+            %li 
+              = link_to('退出', destroy_user_session_path, method: 'DELETE')
+          - else
+            %li
+              = link_to('注册', new_user_registration_path)
+            %li
+              = link_to('登录', new_user_session_path)
               
-    .container
+    .container{style: 'background-color: #f1f1f1'}
       = yield
+    .footer
+      %p.center SISE Game TV
+      %p.center &copy Randy 2015

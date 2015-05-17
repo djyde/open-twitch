@@ -5,7 +5,7 @@
         = image_tag('http://tp2.sinaimg.cn/1649937881/180/40025567279/1')
       .username= @user.username
       .description= @user.description
-      - if user_signed_in?
+      - if user_signed_in? and current_user == @user
         .edit{style: 'text-align: center;'}
           = link_to('编辑资料',edit_user_registration_path)
     / # .description= @user.description
@@ -18,4 +18,5 @@
           %span{style: 'font-size: 1em;'} 正在直播：
           = link_to(@user.channel.name, channel_path(@user.channel.id), method: 'GET') 
         %p.center{style: 'font-size: .8em;'}= @user.channel.description
-      = link_to('直播通道',edit_channel_path(current_user.channel.id), class: :button)
+      - if current_user == @user
+        = link_to('直播通道',edit_channel_path(current_user.channel.id), class: :button)

@@ -1,14 +1,21 @@
-.channel-block
-  .player-block
-    .player
 
-  .title= @channel.name
-  .description= @channel.description
-
-.chat-block
-  .message
-    %p.status
-  .send
-    %input#username{type: 'hidden', value: current_user.username}
-    %input#msg{type: 'text'}
-    %button#send{type: 'submit'} Send
+.grid{style: 'overflow: hidden; padding-top:24px; width: 1024px;'}
+  .channel-block
+    .player-block
+      .player
+    .info
+      .title= @channel.name
+      .description= @channel.description
+      .user-block
+        .avatar
+          = image_tag('http://tp2.sinaimg.cn/1649937881/180/40025567279/1')
+        .content
+          .username= link_to(@channel.user.username,profile_path(@channel.user.id))
+          .user-description= @channel.user.description
+  .chat-block
+    .status.center
+    .message
+    .send
+      %input#user_id{type: 'hidden', value: current_user.id}
+      %input#username{type: 'hidden', value: current_user.username}
+      %input#msg{type: 'text', placeholder: '按空格键发送消息'}
