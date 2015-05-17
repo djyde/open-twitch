@@ -2,7 +2,7 @@
   .container
     .user-info
       .avatar
-        = image_tag('http://tp2.sinaimg.cn/1649937881/180/40025567279/1')
+        = image_tag('avatar.png')
       .username= @user.username
       .description= @user.description
       - if user_signed_in? and current_user == @user

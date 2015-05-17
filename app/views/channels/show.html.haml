@@ -8,7 +8,7 @@
       .description= @channel.description
       .user-block
         .avatar
-          = image_tag('http://tp2.sinaimg.cn/1649937881/180/40025567279/1')
+          = image_tag('avatar.png')
         .content
           .username= link_to(@channel.user.username,profile_path(@channel.user.id))
           .user-description= @channel.user.description
