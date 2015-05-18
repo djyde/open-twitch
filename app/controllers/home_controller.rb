@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @games = Game.all
+    @user_count = User.count
     @channels = Channel.where(channel_on: true)
   end
 
