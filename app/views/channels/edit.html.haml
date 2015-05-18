@@ -3,7 +3,7 @@
   .form
     = simple_form_for @channel do |f|
       = f.input :name, label: '直播标题'
-      = f.input :url, label: 'RTMP地址'
+      = f.input :url, label: 'RTMP地址', placeholder: '例如 rtmp://172.16.123.45:1935/live/randy'
       = f.input :description, label: '直播内容详情'
       = f.input :channel_on, label: '直播开启', hint: '每天 24 点后自动关闭直播', as: :boolean
-      = f.submit '保存修改', class: :button, style: 'width: 128px;'
+      = f.submit '保存修改', class: :button, style: 'width: 128px; margin-top: 12px;'
