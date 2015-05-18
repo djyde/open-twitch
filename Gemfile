@@ -28,6 +28,7 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise', '~> 3.4.1'
 gem 'normalize-rails', '~> 3.0.3'
 gem "swf_fu", "~> 2.0"
+gem 'rails_admin', '~> 0.6.7'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
