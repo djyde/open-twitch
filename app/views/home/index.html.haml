@@ -3,13 +3,17 @@
 
 .events
 
-  .brand
-    %h1.center 
-      SISE Game TV
-      %span{style: 'font-size: .4em'} beta
-    %h4.center 
-      %span{style: 'font-size: 1.8em;'} #{@user_count} 
-      位华软玩家正在或曾经在这里分享欢乐
+  .brand{style: 'padding-top: 28px;'}
+    / %h1.center 
+    /   SISE Game TV
+    /   %span{style: 'font-size: .4em'} beta
+    / %h4.center 
+    /   %span{style: 'font-size: 1.8em;'} #{@user_count} 
+    /   位华软玩家正在或曾经在这里分享欢乐
+    .now
+      = swf_tag "StrobeMediaPlayback.swf", flashvars: {src: 'rtmp://172.16.103.32:1935/live/choou', autoHideControlBar: true, streamType: "live", autoPlay: true,verbose: true}, parameters: {allowfullscreen: true}
+    .title.center{style: 'margin-top: 28px; color: #fff;'}
+      = link_to('正在直播：华软杯 DotA2 四强赛 AV vs Z',channel_path(43), style: 'color: #fff; font-weight: bold; background-color: #000; padding: 12px; border-radius: 4px;')
 
 
 .lives-block

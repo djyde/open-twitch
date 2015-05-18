@@ -4,6 +4,13 @@
 
 $primary: #009688;
 
+.now{
+  padding-left: 128px;
+  padding-right: 128px;
+  height: 380px;
+
+}
+
 .header{
   padding-top: 14px;
   padding-bottom: 14px;
@@ -37,7 +44,7 @@ $primary: #009688;
 
 .events{
   background-color: #f7f7f7;
-  height: 540px;
+  height: 480px;
   background-image: url("background.png");
   background-size: cover;
   .brand{
