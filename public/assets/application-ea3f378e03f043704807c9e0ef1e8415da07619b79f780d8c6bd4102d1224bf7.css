@@ -1,0 +1,848 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+/* line 9, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+/* line 77, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+/* line 98, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 110, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 136, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 154, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 170, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 174, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 185, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 193, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 204, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 229, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 252, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 290, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+/* line 356, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 367, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 376, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 387, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 396, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 405, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 416, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 421, /Users/randy/.rvm/gems/ruby-2.1.3/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+td,
+th {
+  padding: 0;
+}
+/* line 9, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block {
+  width: 800px;
+  height: 800px;
+  margin-right: 10px;
+  display: inline-block;
+}
+/* line 14, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .player {
+  width: 100%;
+  height: 512px;
+  background-color: #000;
+}
+/* line 20, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .info {
+  background-color: #fff;
+  padding: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+}
+/* line 25, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .info .title {
+  font-size: 1.4em;
+}
+/* line 29, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .info .description {
+  white-space: pre-wrap;
+  font-size: .9em;
+  margin-top: 12px;
+}
+/* line 36, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .user-block {
+  overflow: hidden;
+  margin-top: 12px;
+}
+/* line 40, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .user-block .avatar {
+  display: inline-block;
+  float: left;
+  margin-right: 12px;
+}
+/* line 44, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .user-block .avatar img {
+  width: 48px;
+  height: 48px;
+}
+/* line 49, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .user-block .content {
+  display: inline-block;
+  float: left;
+}
+/* line 52, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .user-block .content .username {
+  font-weight: bold;
+}
+/* line 55, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.channel-block .user-block .content .user-description {
+  font-size: .9em;
+  margin-top: 8px;
+}
+
+/* line 63, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block {
+  background-color: #fff;
+  width: 256px;
+  height: 640px;
+  float: right;
+}
+/* line 68, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .status {
+  font-size: .9em;
+  padding: 8px;
+  border-bottom: 1px solid #f7f7f7;
+}
+/* line 73, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .online-count {
+  font-size: .8em;
+}
+/* line 76, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .message {
+  padding: 12px;
+  font-size: .9em;
+  height: 520px;
+  overflow: auto;
+}
+/* line 81, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .message .item {
+  margin-bottom: 8px;
+}
+/* line 83, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .message .item .username {
+  font-weight: bold;
+}
+/* line 89, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .send {
+  border-top: 1px solid #f7f7f7;
+}
+/* line 92, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .send input[type="text"] {
+  outline: none;
+  font-size: .9em;
+  padding: 4px;
+  height: 24px;
+  margin: 12px;
+  width: 220px;
+}
+/* line 101, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .send input[type="text"]:focus {
+  outline: 1px solid #009688;
+}
+/* line 106, /Users/randy/rails/open-twitch/app/assets/stylesheets/channels.scss */
+.chat-block .login {
+  border-top: 1px solid #f7f7f7;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+@charset "UTF-8";
+/* line 4, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: Karla,'Hiragino Sans GB','Microsoft YaHei',微软雅黑,STHeiti,'WenQuanYi Micro Hei',Helvetica,Arial,sans-serif;
+}
+
+/* line 9, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+a {
+  text-decoration: none;
+  color: #009688;
+}
+
+/* line 14, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form {
+  width: 50%;
+  margin: 0 auto;
+}
+/* line 19, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form .button {
+  margin-top: 12px;
+}
+/* line 23, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form span.hint {
+  font-size: .9em;
+  color: red;
+}
+/* line 28, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form span.error {
+  font-size: .9em;
+  color: red;
+}
+/* line 33, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form label {
+  display: inherit;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+/* line 40, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form input {
+  width: 100%;
+  padding: 12px;
+  outline: none;
+}
+/* line 46, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form input:focus {
+  outline: 1px solid #009688;
+}
+/* line 50, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form input[type="checkbox"] {
+  width: auto;
+  margin-right: 4px;
+}
+/* line 55, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form input[type="submit"] {
+  display: block;
+  text-align: center;
+  width: 128px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #009688;
+  font-weight: bold;
+  border: none;
+}
+/* line 68, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form textarea {
+  outline: none;
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+}
+/* line 75, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.form textarea:focus {
+  outline: 1px solid #009688;
+}
+
+/* line 80, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.button {
+  display: block;
+  text-align: center;
+  width: 64px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #009688;
+  font-weight: bold;
+  border: none;
+}
+
+/* line 93, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.center {
+  text-align: center;
+}
+
+/* line 97, /Users/randy/rails/open-twitch/app/assets/stylesheets/global.scss */
+.grid {
+  margin: 0 auto;
+  width: 960px;
+}
+/* line 7, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.now {
+  padding-left: 128px;
+  padding-right: 128px;
+  height: 380px;
+}
+
+/* line 14, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.header {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  overflow: hidden;
+}
+/* line 19, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.header .logo {
+  float: left;
+  display: inline-block;
+}
+/* line 23, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.header .logo a {
+  text-decoration: none;
+  color: #009688;
+}
+/* line 29, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.header ul.nav {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+}
+/* line 33, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.header ul.nav li {
+  float: left;
+  margin-left: 12px;
+}
+/* line 37, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.header ul.nav li a {
+  text-decoration: none;
+}
+
+/* line 45, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.events {
+  background-color: #f7f7f7;
+  height: 480px;
+  background-image: url("background.png");
+  background-size: cover;
+}
+/* line 50, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.events .brand {
+  color: #fff;
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 240px;
+}
+
+/* line 58, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+/* line 65, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .title h1 {
+  display: inline-block;
+}
+/* line 68, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .title span {
+  margin-left: 8px;
+  font-size: .8em;
+  color: #777;
+}
+/* line 75, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .item {
+  display: inline-block;
+  float: left;
+  height: 220px;
+  margin-right: 20px;
+}
+/* line 80, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .item .img {
+  width: 220px;
+  height: 120px;
+  margin-bottom: 8px;
+  background-color: #000;
+}
+/* line 87, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .item .user {
+  font-size: .8em;
+  color: #777;
+}
+/* line 90, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .item .user a {
+  text-decoration: none;
+}
+/* line 95, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .item .online-count {
+  float: right;
+}
+/* line 99, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .item .channel-description {
+  width: 220px;
+}
+/* line 104, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.lives-block .item .activity a {
+  display: inherit;
+  margin-bottom: 6px;
+  text-decoration: none;
+  font-size: .9em;
+  color: #000;
+}
+
+/* line 116, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.games-block {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* line 120, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.games-block .block {
+  text-decoration: none;
+  width: 140px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  float: left;
+  color: gray;
+}
+/* line 128, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.games-block .block .name {
+  margin-top: 12px;
+  font-size: .7em;
+}
+/* line 133, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.games-block .block .game .pic img {
+  width: 100%;
+}
+
+/* line 140, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.footer {
+  margin-top: 64px;
+}
+/* line 142, /Users/randy/rails/open-twitch/app/assets/stylesheets/home.scss */
+.footer p {
+  font-size: .8em;
+}
+/* line 7, /Users/randy/rails/open-twitch/app/assets/stylesheets/profiles.scss */
+.profile-block {
+  background-color: #f1f1f1;
+}
+/* line 13, /Users/randy/rails/open-twitch/app/assets/stylesheets/profiles.scss */
+.profile-block .container {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+/* line 19, /Users/randy/rails/open-twitch/app/assets/stylesheets/profiles.scss */
+.profile-block .container .user-info .avatar {
+  text-align: center;
+}
+/* line 21, /Users/randy/rails/open-twitch/app/assets/stylesheets/profiles.scss */
+.profile-block .container .user-info .avatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+/* line 28, /Users/randy/rails/open-twitch/app/assets/stylesheets/profiles.scss */
+.profile-block .container .user-info .username {
+  color: #009688;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 12px;
+}
+/* line 35, /Users/randy/rails/open-twitch/app/assets/stylesheets/profiles.scss */
+.profile-block .container .user-info .description {
+  font-size: .9em;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
