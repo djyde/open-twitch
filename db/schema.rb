@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518042325) do
+ActiveRecord::Schema.define(version: 20150519022520) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20150518042325) do
     t.boolean  "channel_on",  default: false
     t.string   "url"
     t.integer  "game_id"
+    t.boolean  "show_on",     default: false
+    t.string   "show_name"
   end
 
   add_index "channels", ["game_id"], name: "index_channels_on_game_id"
