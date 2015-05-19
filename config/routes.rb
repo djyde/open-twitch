@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   get 'users/:id' => 'profiles#index', as: :profile
 
+  get 'api/channels/increase/:id' => 'channels#increase_online'
+  get 'api/channels/decrease/:id' => 'channels#decrease_online'
+
 
 
   
