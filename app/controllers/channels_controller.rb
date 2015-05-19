@@ -31,8 +31,9 @@ class ChannelsController < ApplicationController
       params.require(:channel).permit(:name,:description,:channel_on, :url)
     end
 
-    def online_count_params
-      params.require(:channel).permit(:id)
+    def current_user_auth
+      if current_user.id != Channel.find(params[:id]).user.id
+        redirect_to root_path
+      end
     end
-
 end
