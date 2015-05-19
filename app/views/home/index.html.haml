@@ -34,5 +34,8 @@
         /   = link_to(channel.name, channel_path(channel.id), method: 'GET')
         .user
           = link_to(channel.user.username,profile_path(channel.user.id))
-          %span 正在直播
+          %span 直播
+          .online-count
+            %span{style: 'color: #000; font-weight: bold;'}= channel.online_count
+            人正在收看
         .channel-description{style: 'margin-top: 8px; font-size: .8em;'}= channel.description
