@@ -16,5 +16,7 @@
 !/log/.keep
 /tmp
 
-/app/assets/images
+/app/assets/*.jpg
+/app/assets/*.png
+
 /public/assets
